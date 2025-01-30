@@ -38,14 +38,31 @@ public class Fraction {
    }
 
    public static void main (String args[]) {
+      
       try {
+         int num = 1, denom = 1; // DEFAULT VALUES
+         
+         if (args.length >= 1) { 
+            num = Integer.parseInt(args[0]);
+         }
+
+         if (args.length >= 2) { 
+            denom = Integer.pasrseInt(args[1]);
+         }
+
+      // Prevent denominator from being zero
+        if (denom == 0) {
+            System.out.println("Error: Denominator cannot be zero. Defaulting to 1.");
+            denom = 1;
+        }
+         
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
          Fraction frac = new Fraction();
 
          // set the values
-         frac.setNumerator(1);
-         frac.setDenominator(3);
+         frac.setNumerator(num);
+         frac.setDenominator(denom);
 
          // print it
          System.out.print("The fraction is: ");
