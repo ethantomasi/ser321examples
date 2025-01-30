@@ -47,7 +47,7 @@ public class Fraction {
          }
 
          if (args.length >= 2) { 
-            denom = Integer.pasrseInt(args[1]);
+            denom = Integer.parseInt(args[1]);
          }
 
       // Prevent denominator from being zero
